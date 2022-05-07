@@ -19,8 +19,12 @@ object Form3: TForm3
     Width = 75
     Height = 25
     Caption = 'Add Me!'
+    DragMode = dmAutomatic
     TabOrder = 0
     OnClick = Button1Click
+    OnDragDrop = Button1DragDrop
+    OnEndDrag = Button1EndDrag
+    OnStartDrag = Button1StartDrag
   end
   object Edit1: TEdit
     Left = 9

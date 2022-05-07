@@ -15,7 +15,13 @@ __published:	// IDE-managed Components
 	TEdit *Edit1;
 	TListBox *ListBox1;
 	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall Button1DragDrop(TObject *Sender, TObject *Source, int X, int Y);
+	void __fastcall Button1StartDrag(TObject *Sender, TDragObject *&DragObject);
+	void __fastcall Button1EndDrag(TObject *Sender, TObject *Target, int X, int Y);
+
+
 private:	// User declarations
+    UnitcodeString tempString;
 public:		// User declarations
 	__fastcall TForm3(TComponent* Owner);
 };

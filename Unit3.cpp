@@ -25,3 +25,25 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	Edit1->Text = "";
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm3::Button1DragDrop(TObject *Sender, TObject *Source, int X, int Y)
+
+{
+	Edit1->Text = "dropeed";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Button1StartDrag(TObject *Sender, TDragObject *&DragObject)
+
+{
+    tempString = Edit1->Text;
+   Edit1->Text = "dragDropping";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Button1EndDrag(TObject *Sender, TObject *Target, int X, int Y)
+
+{
+	Edit1->Text =    tempString;
+}
+//---------------------------------------------------------------------------
+
